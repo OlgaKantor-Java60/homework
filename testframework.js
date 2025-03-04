@@ -1,5 +1,5 @@
 import { occurrences } from "./occurrences.js";
-import { isAnagram } from "./anagram.js";
+import { isAnagram1, isAnagram2 } from "./anagram.js";
 
 function test(commonScript, testObj) {
     //testObj structure {script: <string containg script text>, expected: <any type>}

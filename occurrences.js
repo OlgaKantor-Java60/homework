@@ -8,7 +8,7 @@ export function occurrences(strings) {
   return resArray;
 }
 
-function fillObj(strings, resObj) {
+export function fillObj(strings, resObj) {
   strings.forEach((str) => {
     if (resObj[str] == undefined) {
       resObj[str] = 0;

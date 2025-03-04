@@ -3,8 +3,12 @@ import { testFramework } from "./testframework.js";
 testFramework('occurences function test', 'const strings = ["b", "a", "c", "b", "b", "c"]', 
   ["occurrences(strings)"], [["a=>1", "b=>3", "c=>2"]] );
 
-testFramework('isAnagram testing', 'const string = "hello"', 
-  ['isAnagram(string, "olleh")', 'isAnagram(string, "olhle")', 'isAnagram(string, "hell0")'],
+testFramework('isAnagram1 testing', 'const string = "hello"', 
+  ['isAnagram1(string, "olleh")', 'isAnagram1(string, "olhle")', 'isAnagram1(string, "hell0")'],
   [true, true, false] );
+
+  testFramework('isAnagram2 testing', 'const string = "hello"', 
+    ['isAnagram2(string, "olleh")', 'isAnagram2(string, "olhle")', 'isAnagram2(string, "hell0")'],
+    [true, true, false] );
 
   
