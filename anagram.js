@@ -15,16 +15,21 @@ export function isAnagram1(string, anagram) {
 }
 
 export function isAnagram2(string, anagram) {
-//***
-//without sort()
-//only one object
+  //***
+  //without sort()
+  //only one object
   const lettersStr = Array.from(string);
   const lettersAnag = Array.from(anagram);
-  const resObj = {}; 
-  fillObj(lettersStr, resObj);
-  subLetters(lettersAnag,resObj);
-  const res = Object.values(resObj).reduce((a,b)=>a+b)
-return res===0;
+  let res;
+  if (lettersAnag.length != lettersStr.length) {
+    res = 1;
+  } else {
+    const resObj = {};
+    fillObj(lettersStr, resObj);
+    subLetters(lettersAnag, resObj);
+    res = Object.values(resObj).reduce((a, b) => a + b);
+  }
+  return res === 0;
 }
 
 function subLetters (strings, originalObj) {
