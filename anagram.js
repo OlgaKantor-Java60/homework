@@ -22,14 +22,14 @@ export function isAnagram2(string, anagram) {
   const lettersAnag = Array.from(anagram);
   let res;
   if (lettersAnag.length != lettersStr.length) {
-    res = 1;
+    res = false;
   } else {
     const resObj = {};
     fillObj(lettersStr, resObj);
     subLetters(lettersAnag, resObj);
-    res = Object.values(resObj).reduce((a, b) => a + b);
+    res = Object.values(resObj).every((e) => e===0);
   }
-  return res === 0;
+  return res;
 }
 
 function subLetters (strings, originalObj) {

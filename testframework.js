@@ -78,7 +78,7 @@ function test(commonScript, testObj) {
     return resItem;
   }
   function getResText(resultObject) {
-    const resStr = `${resultObject.script} ; expected is ${resultObject.expectedJSON}; actual is ${resultObject.actualJSON}`;
+    const resStr = `${resultObject.script}; expected is ${resultObject.expectedJSON}; actual is ${resultObject.actualJSON}`;
     return resStr;
   }
   function getSummaryLine(summary) {
