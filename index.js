@@ -6,7 +6,6 @@ let first = 1;
 let second = 2;
 
 //TODO write one code line (insead of three specified below) after which variable 'first" will contain 2 and second will contain 1
-//regular code from Java
 [first, second] = [second, first]
 
 console.log(`second = ${second}`) 
