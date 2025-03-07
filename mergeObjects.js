@@ -4,13 +4,15 @@ export function mergeObjects(firstObj, secondObj, isFirstPref) {
     //if isFirstPref is true, then result object should contain value of the conflicted key from the first object
     //otherwise - from the second one
 
-let res = {};
-if (isFirstPref) {
- res = {...secondObj, ...firstObj}
-} else {
- res = {...firstObj, ...secondObj};
+    let res = { ...firstObj };
+    if (isFirstPref) {
+      for (const key in secondObj) {
+        if (!(key in res)) {
+          res[key] = secondObj[key];
+        }
+      }
+    } else {
+      res = { ...res, ...secondObj };
+    }
+    return res;
 }
-return res;
-} 
-
-//doesn't pass the test, but consits the same object (?)
